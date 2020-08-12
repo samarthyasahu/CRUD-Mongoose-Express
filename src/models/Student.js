@@ -36,12 +36,6 @@ const studentSchema = mongoose.Schema({
     }
 });
 
-// studentSchema.pre('save', async function (next) {
-//     const student = this;
-//     console.log(user);
-//     next()
-// });
-
 const Student = mongoose.model('Student', studentSchema);
 
 module.exports = Student;

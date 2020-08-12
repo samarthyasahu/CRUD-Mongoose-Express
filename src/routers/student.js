@@ -9,6 +9,7 @@ router.post('/students', async (req,res) =>{
     try {
         const student = new Student(req.body);
         await student.save();
+        // const token = await student.generateAuthToken();
         res.status(201).send(student);
     } catch (error) {
         res.status(400).send(error);
